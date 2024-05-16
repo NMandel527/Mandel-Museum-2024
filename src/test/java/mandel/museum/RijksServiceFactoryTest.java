@@ -25,6 +25,7 @@ class RijksServiceFactoryTest
         assertNotNull(pageNumber.artObjects[0].longTitle);
         assertNotNull(pageNumber.artObjects[0].principalOrFirstMaker);
         assertNotNull(pageNumber.artObjects[0].webImage);
+        assertNotNull(pageNumber.artObjects[0].webImage.url);
     }
 
     @Test
@@ -46,6 +47,7 @@ class RijksServiceFactoryTest
         assertNotNull(queryAndPage.artObjects[0].longTitle);
         assertNotNull(queryAndPage.artObjects[0].principalOrFirstMaker);
         assertNotNull(queryAndPage.artObjects[0].webImage);
+        assertNotNull(queryAndPage.artObjects[0].webImage.url);
     }
 
     @Test
@@ -67,5 +69,6 @@ class RijksServiceFactoryTest
         assertNotNull(artistAndPage.artObjects[0].longTitle);
         assertNotNull(artistAndPage.artObjects[0].principalOrFirstMaker);
         assertNotNull(artistAndPage.artObjects[0].webImage);
+        assertNotNull(artistAndPage.artObjects[0].webImage.url);
     }
 }
