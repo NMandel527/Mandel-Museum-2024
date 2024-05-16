@@ -1,6 +1,6 @@
 package mandel.museum;
 
-public class ArtObjects
+public class ArtObject
 {
     public String title;
     public String longTitle;

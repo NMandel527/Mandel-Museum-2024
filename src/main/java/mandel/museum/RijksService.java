@@ -7,20 +7,20 @@ import retrofit2.http.Query;
 public interface RijksService
 {
     @GET("/api/en/collection")
-    Single<Art> artP(
+    Single<Art> pageNumber(
             @Query("key") String key,
             @Query("p") int page
     );
 
     @GET("/api/en/collection")
-    Single<Art> artQ(
+    Single<Art> queryAndPage(
             @Query("key") String key,
             @Query("p") int page,
             @Query("q") String query
     );
 
     @GET("/api/en/collection")
-    Single<Art> artInM(
+    Single<Art> artistAndPage(
             @Query("key") String key,
             @Query("p") int page,
             @Query("involvedMaker") String maker

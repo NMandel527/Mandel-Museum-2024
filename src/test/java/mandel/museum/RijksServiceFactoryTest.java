@@ -8,64 +8,64 @@ import static org.junit.jupiter.api.Assertions.*;
 class RijksServiceFactoryTest
 {
     @Test
-    public void artP()
+    public void pageNumber()
     {
         // given
         ApiKey apiKey = new ApiKey();
         RijksService service = new RijksServiceFactory().getService();
 
         //when
-        Art artP = service.artP(
+        Art pageNumber = service.pageNumber(
                 apiKey.get(),
                 27
         ).blockingGet();
 
         //then
-        assertNotNull(artP.artObjects[0]);
-        assertNotNull(artP.artObjects[1]);
-        assertNotNull(artP.artObjects[2]);
-        assertNotNull(artP.artObjects[3]);
+        assertNotNull(pageNumber.artObjects[0].title);
+        assertNotNull(pageNumber.artObjects[0].longTitle);
+        assertNotNull(pageNumber.artObjects[0].principalOrFirstMaker);
+        assertNotNull(pageNumber.artObjects[0].webImage);
     }
 
     @Test
-    public void artQ()
+    public void queryAndPage()
     {
         // given
         ApiKey apiKey = new ApiKey();
         RijksService service = new RijksServiceFactory().getService();
 
         //when
-        Art artQ = service.artQ(
+        Art queryAndPage = service.queryAndPage(
                 apiKey.get(),
                 31,
                 "De Nachtwacht"
         ).blockingGet();
 
         //then
-        assertNotNull(artQ.artObjects[0]);
-        assertNotNull(artQ.artObjects[1]);
-        assertNotNull(artQ.artObjects[2]);
-        assertNotNull(artQ.artObjects[3]);
+        assertNotNull(queryAndPage.artObjects[0].title);
+        assertNotNull(queryAndPage.artObjects[0].longTitle);
+        assertNotNull(queryAndPage.artObjects[0].principalOrFirstMaker);
+        assertNotNull(queryAndPage.artObjects[0].webImage);
     }
 
     @Test
-    public void artInM()
+    public void artistAndPage()
     {
         // given
         ApiKey apiKey = new ApiKey();
         RijksService service = new RijksServiceFactory().getService();
 
         //when
-        Art artInM = service.artInM(
+        Art artistAndPage = service.artistAndPage(
                 apiKey.get(),
                 104,
                 "Rembrandt van Rijn"
         ).blockingGet();
 
         //then
-        assertNotNull(artInM.artObjects[0]);
-        assertNotNull(artInM.artObjects[1]);
-        assertNotNull(artInM.artObjects[2]);
-        assertNotNull(artInM.artObjects[3]);
+        assertNotNull(artistAndPage.artObjects[0].title);
+        assertNotNull(artistAndPage.artObjects[0].longTitle);
+        assertNotNull(artistAndPage.artObjects[0].principalOrFirstMaker);
+        assertNotNull(artistAndPage.artObjects[0].webImage);
     }
 }
