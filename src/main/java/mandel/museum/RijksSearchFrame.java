@@ -17,8 +17,8 @@ import java.io.IOException;
 import java.net.URL;
 
 public class RijksSearchFrame extends JFrame {
-    ApiKey apiKey = new ApiKey();
-    RijksService service = new RijksServiceFactory().getService();
+    private ApiKey apiKey = new ApiKey();
+    private RijksService service = new RijksServiceFactory().getService();
     private final JTextField search;
     private JLabel[] lbl;
     private final JPanel subPanel;
@@ -87,6 +87,7 @@ public class RijksSearchFrame extends JFrame {
             Image scaledImage = image.getScaledInstance(150, -1, Image.SCALE_DEFAULT);
             ImageIcon imageIcon = new ImageIcon(scaledImage);
             lbl[i].setIcon(imageIcon);
+            lbl[i].setToolTipText(query.artObjects[i].title + " by " + query.artObjects[i].principalOrFirstMaker);
 
             subPanel.add(lbl[i]);
 
@@ -94,7 +95,6 @@ public class RijksSearchFrame extends JFrame {
             lbl[i].addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    imageInformation(query);
                     try {
                         new ImageFrame(currObject).setVisible(true);
                     } catch (IOException ex) {
@@ -126,11 +126,5 @@ public class RijksSearchFrame extends JFrame {
                 .subscribe(
                         this::getImages,
                         Throwable::printStackTrace);
-    }
-
-    private void imageInformation(Art info) {
-        for (int i = 0; i < lbl.length; i++) {
-            lbl[i].setToolTipText(info.artObjects[i].title + " by " + info.artObjects[i].principalOrFirstMaker);
-        }
     }
 }
