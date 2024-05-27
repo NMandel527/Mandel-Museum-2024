@@ -7,25 +7,25 @@ It shows different paintings in the museum with information about each paiting.
 ## GUI
 The gui shows 10 images at a time. 
 
-![10 Images](..%2F..%2FDownloads%2FBackground%20Pics%2FPictures%2FScreenshots%2FRijksGUIOverview.png)
+![10 Images](src/main/resources/Screenshots/RijksGUIOverview.png)
 
 When the use presses "next page", 10 new images show up from the next page. 
 
-![Next Page](..%2F..%2FDownloads%2FBackground%20Pics%2FPictures%2FScreenshots%2FNextPage.png)
+![Next Page](src/main/resources/Screenshots/NextPage.png)
 
 When the user presses "previous page", 10 images show up from the previous page.
 
 When the use hovers over an image, the title and artist show up.
 
-![Hover.png](..%2F..%2FDownloads%2FBackground%20Pics%2FPictures%2FScreenshots%2FHover.png)
+![Hover.png](src/main/resources/Screenshots/Hover.png)
 
 When the user clicks on an image, the enlarged version shows up.
 
-![EnlargedImage.png](..%2F..%2FDownloads%2FBackground%20Pics%2FPictures%2FScreenshots%2FEnlargedImage.png)
+![EnlargedImage.png](src/main/resources/Screenshots/EnlargedImage.png)
 
 When a user puts a request into the search bar, related images show up.
 
-![SearchBar.png](..%2F..%2FDownloads%2FBackground%20Pics%2FPictures%2FScreenshots%2FSearchBar.png)
+![SearchBar.png](src/main/resources/Screenshots/SearchBar.png)
 
 
 ### Links
